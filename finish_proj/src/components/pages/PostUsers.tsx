@@ -1,39 +1,46 @@
 import { useState } from "react"
-import "./css/style.pust_user.css";
+import "./css/style.post_user.css";
 
-const fakeMSG = "hello world from fake msg";
-const fakeImg = "https://www.misgeret.co.il/Pics/limorbarak/336104-1804-10-11-19-L.jpg";
-const fakeUser = "David"
+
 function formatted_date() {
     let result = "";
     let d = new Date();
-    result += d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate() +
+    result += d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear() +
         " " + d.getHours() + ":" + d.getMinutes();
     return result;
 }
 
-export default function PostUsers() {
-    const [count, setCount] = useState(0);
-    const [isCorrect, setIsCorrect] = useState<boolean>(false);
 
+export default function PostUsers(
+    props: {
+        idMessage: number;
+        idUser: string;
+        nameUser: string;
+        urlImg: string;
+        message: string;
+    }
+) {
+    const [count, setCount] = useState(0);
 
     return (
         <>
             <section className="design_post">
-                <form action="">
-                    <h1>name</h1>
-                    <p>{fakeUser}</p>
-                    <img src={fakeImg} alt="" />
-                    <p>{fakeMSG}</p>
-                    <section className="design_likes">
-                        <p onClick={() => {
-                            setCount(count - 1)
-                        }}>Dislike</p>
-                    <p onClick={() => {
-                        setCount(count + 1)
-                    }}>👍 {count}</p>
+                <form className="padding_post"  action="" >
+                    <section className="design_to_row">
+                    <img src={props.urlImg} alt="" />
+                    <p>{props.nameUser}</p>
                     </section>
-                    <p>time published: {formatted_date()}</p>
+                    <p className="user_message">{props.message}</p>
+                    <section className="design_to_row">
+                        <p className="like_to_post"
+                         onClick={() => {
+                            setCount(count + 1)
+                            if(count ===1){
+                                setCount(0)
+                            }
+                        }}>👍 {count}</p>
+                        <p> published: {formatted_date()}</p>
+                    </section>
                 </form>
             </section>
         </>
