@@ -1,0 +1,37 @@
+.design_post {
+    display: flex;
+    justify-content: center;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+form{
+    border: 2px solid black;
+    width: 100vw;
+    border-radius: 20px;
+    margin-top: 100px;
+    gap: 100px;
+}
+
+.design_to_row{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3%;
+    margin-right: 3%;
+    gap: 1rem;
+}
+
+.padding_post{
+    padding: 5% 5% 0% 5%;
+}
+
+.like_to_post:hover{
+    cursor:pointer;
+    opacity: 0.7;
+    transform: scale(1.2);
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
