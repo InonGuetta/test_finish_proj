@@ -1,0 +1,14 @@
+.navbar_application_layout {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(45deg, #a1c4fd, #c2e9fb, #c2e9fb, #f0f7f9);
+    height: 18vh;
+}
+
+.logo {
+    margin-right: 5rem;
+}
+
+.slogen {
+    margin-left: 5rem;
+}

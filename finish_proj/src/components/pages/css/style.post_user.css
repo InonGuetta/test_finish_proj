@@ -5,6 +5,10 @@
     margin: 0 auto;
 }
 
+.logo_user{
+    border-radius: 50%;
+}
+
 form{
     border: 2px solid black;
     width: 100vw;

@@ -1,7 +1,6 @@
 import { useState } from "react"
 import "./css/style.post_user.css";
 
-
 function formatted_date() {
     let result = "";
     let d = new Date();
@@ -9,7 +8,6 @@ function formatted_date() {
         " " + d.getHours() + ":" + d.getMinutes();
     return result;
 }
-
 
 export default function PostUsers(
     props: {
@@ -20,14 +18,15 @@ export default function PostUsers(
         message: string;
     }
 ) {
-    const [count, setCount] = useState(0);
 
+    const [count, setCount] = useState(0);
+    
     return (
         <>
             <section className="design_post">
                 <form className="padding_post"  action="" >
                     <section className="design_to_row">
-                    <img src={props.urlImg} alt="" />
+                    <img className="logo_user" src={props.urlImg} alt="logo_user" />
                     <p>{props.nameUser}</p>
                     </section>
                     <p className="user_message">{props.message}</p>

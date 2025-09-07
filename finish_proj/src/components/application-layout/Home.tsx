@@ -1,8 +1,11 @@
-import PostUsers from "./PostUsers";
+import PostUsers from "../pages/PostUsers.tsx";
 import userData from "../../Data/fakeData.tsx";
+import "../pages/css/home.css";
 
 export default function Home() {
+
     const { id_message, id_user, name_user, url_img, message } = userData;
+    
     return (
         <>
             <main className="design_messages">
