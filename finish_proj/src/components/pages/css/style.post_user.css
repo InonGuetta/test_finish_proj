@@ -5,11 +5,13 @@
     margin: 0 auto;
 }
 
-.logo_user{
+.logo_user {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
 }
 
-form{
+form {
     border: 2px solid black;
     width: 100vw;
     border-radius: 20px;
@@ -17,7 +19,7 @@ form{
     gap: 100px;
 }
 
-.design_to_row{
+.design_to_row {
     display: flex;
     justify-content: space-between;
     margin-left: 3%;
@@ -25,17 +27,19 @@ form{
     gap: 1rem;
 }
 
-.padding_post{
+.padding_post {
     padding: 5% 5% 0% 5%;
 }
-
-.like_to_post:hover{
-    cursor:pointer;
-    opacity: 0.7;
-    transform: scale(1.2);
+.image_user_public{
+    margin: 0 auto;
+    border-radius:15px;
+    display: flex;
+    justify-content: center;
+    width: 80%;
 }
 
-img {
-    width: 100px;
-    height: 100px;
+.like_to_post:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transform: scale(1.2);
 }
