@@ -16,10 +16,12 @@ export default function PostUsers(
         nameUser: string;
         urlImg: string;
         message: string;
+        urlMessageImg: string;
     }
 ) {
 
-    const [count, setCount] = useState(0);
+    const [like, setLike] = useState(0);
+    const [disLike, setDisLike] = useState(0);
     
     return (
         <>
@@ -30,14 +32,21 @@ export default function PostUsers(
                     <p>{props.nameUser}</p>
                     </section>
                     <p className="user_message">{props.message}</p>
+                    <img className="image_user_public" src={props.urlMessageImg} alt="photo_post" />
                     <section className="design_to_row">
                         <p className="like_to_post"
                          onClick={() => {
-                            setCount(count + 1)
-                            if(count ===1){
-                                setCount(0)
+                            setLike(like + 1)
+                            if(like ===1){
+                                setLike(0)
                             }
-                        }}>👍 {count}</p>
+                        }}>👍 {like}</p>
+                        <p  onClick={() => {
+                            setDisLike(disLike + 1)
+                            if(disLike ===1){
+                                setDisLike(0)
+                            }
+                        }}>👎 {disLike} </p>
                         <p> published: {formatted_date()}</p>
                     </section>
                 </form>
