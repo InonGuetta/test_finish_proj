@@ -9,6 +9,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    border: 1px solid black;
 }
 
 form {
@@ -30,6 +31,11 @@ form {
 .padding_post {
     padding: 5% 5% 0% 5%;
 }
+
+.father_design_likes{
+    display: flex;
+}
+
 .image_user_public{
     margin: 0 auto;
     border-radius:15px;
@@ -38,8 +44,8 @@ form {
     width: 80%;
 }
 
-.like_to_post:hover {
+.like_or_dislike:hover {
     cursor: pointer;
     opacity: 0.7;
-    transform: scale(1.2);
+    transform: scale(1.05);
 }

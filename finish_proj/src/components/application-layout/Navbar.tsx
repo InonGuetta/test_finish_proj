@@ -1,6 +1,7 @@
 import Logo from "./Logo"
 import Slogen from "./Slogen"
 import "../pages/css/navbar.css"
+import Button from "./Buttons"
 
 export default function Navbar(){
     return(
@@ -9,6 +10,9 @@ export default function Navbar(){
         <p className="slogen">
         <Slogen/>
         </p>
+        <section className="button">
+          <Button/>  
+        </section>
         <p className="logo">
         < Logo/>
         </p>
