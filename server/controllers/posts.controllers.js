@@ -32,19 +32,3 @@ export async function getOnePost(req, res) {
         res.status(500).json({ msg: "Server error. Please try again later." });
     }
 }
-
-export async function deletePost(req, res) {
-    try {
-
-    } catch (e) {
-
-    }
-}
-
-export async function updatePost(req, res) {
-    try {
-
-    } catch (e) {
-
-    }
-}

@@ -30,4 +30,13 @@ export async function toAdd(newdata) {
     }
 }
 
+export async function currectIdPost() {
+    try {
+        const data = await Read();
+        const real_id_to_new_post = deflate.length +1
+        return real_id_to_new_post;
+    } catch (e) {
+        console.log(e.message);
+    }
+}
 
