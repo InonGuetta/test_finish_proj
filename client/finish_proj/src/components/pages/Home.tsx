@@ -1,32 +1,69 @@
 import PostUsers from "./PostUsers.tsx";
-import userData from "../../Data/fakeData.tsx";
 import "../pages/css/home.css";
+import { getPosts, type Post } from "../../service_client/api.ts";
 import Navbar from "../application-layout/Navbar.tsx";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+    const [posts, setPosts] = useState<Post[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
-    const { id_message, id_user, name_user, url_img, message, url_message_img} = userData;
-    
+    const fetchPosts = async () => {
+        try {
+            setIsLoading(true);
+            const postsData = await getPosts();
+            setPosts(postsData);
+        } catch (error) {
+            console.error('Error fetching posts:', error);
+            setError('Failed to load posts');
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        fetchPosts();
+    }, []);
+
+
+
+    if (isLoading) {
+        return (
+            <>
+                <Navbar />
+                <h1>Loading posts...</h1>
+            </>
+        );
+    }
+    if (error) {
+        return (
+            <>
+                <Navbar />
+                <h1>Error: {error}</h1>
+            </>
+        );
+    }
+
+
     return (
         <>
-            <Navbar/>
+            <Navbar />
             <main className="design_messages">
-                {(() => {
-                    const messageCards = [];
-                    for (let i = 0; i < id_message.length; i++) {
-                        messageCards.push(
+                {
+                    posts.map(item => (
+                        <section>
                             <PostUsers
-                                idMessage={id_message[i]}
-                                idUser={id_user[i]}
-                                nameUser={name_user[i]}
-                                urlImg={url_img[i]}
-                                message={message[i]}
-                                urlMessageImg={url_message_img[i]}
+                                idMessage={item.id_message}
+                                idUser={item.id_user}
+                                nameUser={item.name_user}
+                                urlImg={item.url_img}
+                                message={item.message}
+                                urlMessageImg={item.url_message_img}
                             />
-                        );
-                    }
-                    return messageCards;
-                })()}
+                        </section>
+                    ))
+                }
             </main>
         </>
     )

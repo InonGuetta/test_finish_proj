@@ -19,16 +19,12 @@ export default function Navbar() {
         <p className="logo">
           < Logo />
         </p>
-        <section
-          onClick={() => {
+        <section className="burger_menu" onClick={() => {
             setOpen(true)
             if (open === true) {
               setOpen(false)
-            }
-          }
-          }
+            }}}
         >
-
           <i className={open ? "burger" : "open_burger"}>✖</i>
         </section>
         <section className="burger_menu"
@@ -36,15 +32,11 @@ export default function Navbar() {
             setOpen(true)
             if (open === true) {
               setOpen(false)
-            }
-          }
-          }
+            }}}
         >
           <i className={open ? "open_burger" : "burger"}>☰</i>
         </section>
       </section>
-
-
       <section id="side_bar" className={open ? "burger" : "open_burger"}>
         <section className="side_bar_open">
           <Button />

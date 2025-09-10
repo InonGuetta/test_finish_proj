@@ -5,10 +5,6 @@
     height: 14vh;
 }
 
-.logo {
-    margin-right: 2rem;
-}
-
 .slogen {
     margin-left: 2rem;
     margin-top: 1.3rem;
@@ -19,11 +15,11 @@
     margin-top: 2rem;
 }
 
-.burger{
+.burger {
     font-size: 3rem;
 }
 
-.open_burger{
+.open_burger {
     display: none;
 }
 
@@ -34,7 +30,6 @@
 
     .logo {
         transform: scale(0.7);
-        /* margin-bottom: 10rem; */
     }
 
     .button {
@@ -48,7 +43,7 @@
     }
 }
 
-@media (max-width: 680px) { 
+@media (max-width: 680px) {
     .logo {
         display: none;
     }
@@ -62,16 +57,16 @@
     }
 }
 
-@media (min-width: 680px) { 
-    .burger_menu{
+@media (min-width: 680px) {
+    .burger_menu {
         display: none;
     }
 
-    #side_bar{
+    #side_bar {
         display: none;
     }
 }
 
-.side_bar_open{
+.side_bar_open {
     background-color: #f0f7f9;
 }
