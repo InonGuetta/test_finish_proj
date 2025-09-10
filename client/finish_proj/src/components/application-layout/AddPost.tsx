@@ -1,6 +1,7 @@
 import { useState } from "react";
 // import { postAPI } from "./../../service/apipost.js";
 import "../pages/css/button.css";
+import Navbar from "./Navbar";
 
 export default function AddPost() {
     const [newPost, setNewPost] = useState({
@@ -38,6 +39,8 @@ export default function AddPost() {
 
     return (
         <>
+        <Navbar/>
+        <h1>hello from add post</h1>
             <section>
                 {/* <form onSubmit={handleSubmit}>
                     <label className="label_insert">

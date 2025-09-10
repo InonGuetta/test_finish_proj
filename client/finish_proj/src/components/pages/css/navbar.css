@@ -11,6 +11,7 @@
 
 .slogen {
     margin-left: 2rem;
+    margin-top: 1.3rem;
 }
 
 .button {
@@ -18,23 +19,59 @@
     margin-top: 2rem;
 }
 
+.burger{
+    font-size: 3rem;
+}
+
+.open_burger{
+    display: none;
+}
+
 @media (max-width: 1000px) {
     .navbar_application_layout {
         height: 10vh;
     }
-    
+
     .logo {
-        margin-right: 2rem;
         transform: scale(0.7);
-        margin-bottom: 7rem;
+        /* margin-bottom: 10rem; */
     }
 
     .button {
-        margin-top: 1rem;
+        margin-top: 0.7rem;
     }
-    
+
     .slogen {
+        font-size: 1.3rem;
         margin-left: 1rem;
         margin-top: 1rem;
     }
+}
+
+@media (max-width: 680px) { 
+    .logo {
+        display: none;
+    }
+
+    .button {
+        display: none;
+    }
+
+    .slogen {
+        display: none;
+    }
+}
+
+@media (min-width: 680px) { 
+    .burger_menu{
+        display: none;
+    }
+
+    #side_bar{
+        display: none;
+    }
+}
+
+.side_bar_open{
+    background-color: #f0f7f9;
 }
