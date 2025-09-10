@@ -1,6 +1,7 @@
 import PostUsers from "./PostUsers.tsx";
 import userData from "../../Data/fakeData.tsx";
 import "../pages/css/home.css";
+import Navbar from "../application-layout/Navbar.tsx";
 
 export default function Home() {
 
@@ -8,6 +9,7 @@ export default function Home() {
     
     return (
         <>
+            <Navbar/>
             <main className="design_messages">
                 {(() => {
                     const messageCards = [];

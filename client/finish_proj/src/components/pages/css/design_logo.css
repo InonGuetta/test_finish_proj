@@ -6,16 +6,7 @@
 }
 
 @media (max-width: 1000px) {
-    .navbar_application_layout {
-        height: 10vh;
-    }
-    
-    .logo {
-        margin-right: 2rem;
-    }
-    
-    .slogen {
-        margin-left: 1rem;
-        margin-top: 1rem;
-    }
+    .design_pthoto{
+        margin-top: -1.5rem;
+    }    
 }
