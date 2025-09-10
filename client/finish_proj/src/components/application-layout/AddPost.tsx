@@ -42,14 +42,14 @@ export default function AddPost() {
         <Navbar/>
         <h1>hello from add post</h1>
             <section>
-                {/* <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
                     <label className="label_insert">
                         type riddle:
                     </label>
                     <input
                         type="text"
                         name="name"
-                        value={newPost.name}
+                        // value={newPost.name}
                         onChange={handleChange}
                         required
                     />
@@ -59,7 +59,7 @@ export default function AddPost() {
                     <input
                         type="text"
                         name="taskDescription"
-                        value={newPost.taskDescription}
+                        // value={newPost.taskDescription}
                         onChange={handleChange}
                         required
                     />
@@ -69,14 +69,14 @@ export default function AddPost() {
                     <input
                         type="text"
                         name="correctAnswer"
-                        value={newPost.correctAnswer}
+                        // value={newPost.correctAnswer}
                         onChange={handleChange}
                         required
                     />
                     <button className="submit_insert_riddle" type="submit" disabled={isLoading}>
                         {isLoading ? 'Adding Riddle...' : 'Add Riddle'}
                     </button>
-                </form > */}
+                </form >
 
 
 
