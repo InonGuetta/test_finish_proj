@@ -1,6 +1,6 @@
 "# test_finish_proj" 
 
-# finish proj Kiosk
+# finish proj kodkod
 
 **Student Name:** Inon Guetta
 **Course:** Kodkod FullStack
