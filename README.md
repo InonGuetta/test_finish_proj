@@ -1,5 +1,3 @@
-"# test_finish_proj" 
-
 # finish proj kodkod
 
 **Student Name:** Inon Guetta
